@@ -154,7 +154,7 @@
         },
         {
             "name": "[variables('publicIpAddressName')]",
-            "type": "Microsoft.Network/publicIpAddresses",
+            "type": "Microsoft.Authorization/locks",
             "apiVersion": "2016-09-01",
             "location": "[resourceGroup().location]",
             "properties": {
@@ -176,7 +176,7 @@
                         "properties": {
                             "priority": 1000,
                             "sourceAddressPrefix": "*",
-                            "protocol": "TCP",
+                            "protocol": "Tcp",
                             "destinationPortRange": "22",
                             "access": "Allow",
                             "direction": "Inbound",
